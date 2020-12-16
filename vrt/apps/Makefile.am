@@ -18,3 +18,8 @@
 include $(top_srcdir)/Makefile.common
 
 AM_CPPFLAGS = -I$(top_srcdir)/include
+
+bin_PROGRAMS = pack_test
+pack_test_SOURCES = pack_test.cc
+pack_test_LDADD = ../lib/libvrt.la -lboost_system -lpthread
+pack_test_LDFLAGS= -no-install
